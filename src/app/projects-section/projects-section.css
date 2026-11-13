@@ -1,0 +1,160 @@
+:host {
+  display: block;
+  grid-column: 1 / -1;
+}
+
+#projects {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  border: 1px solid #111;
+}
+
+.project-info {
+  padding: 2rem;
+}
+
+.project-visual {
+  display: grid;
+  min-height: 14rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 4px;
+  background: #fff;
+}
+
+.project-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 14rem;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.project-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: #111;
+  clip-path: polygon(100% 0, calc(100% - 2px) 0, calc(90% - 2px) 100%, 90% 100%);
+  pointer-events: none;
+}
+
+.project-card:nth-of-type(2) .project-media {
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.project-card:nth-of-type(2) .project-media::after {
+  clip-path: polygon(10% 0, calc(10% + 2px) 0, 2px 100%, 0 100%);
+}
+
+.project-media-label {
+  position: relative;
+  z-index: 2;
+  max-width: 70%;
+  line-height: 1.35;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-tags li {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: #eee;
+  color: #222;
+  font-size: 0.9rem;
+}
+
+.project-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  color: #444;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+}
+
+.project-label::before {
+  content: "";
+  width: 1.25rem;
+  height: 0.25rem;
+  background: #e21b2d;
+}
+
+.project-info h3 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0.8rem 1.1rem;
+  background: #e21b2d;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-github-icon {
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: currentColor;
+  flex: none;
+}
+
+.project-link:hover {
+  background: #b21927;
+}
+
+.project-link:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "visual"
+      "info";
+  }
+
+  .project-visual {
+    grid-area: visual;
+    min-height: 12rem;
+  }
+
+  .project-media {
+    min-height: 12rem;
+  }
+
+  .project-info {
+    grid-area: info;
+    padding: 1.25rem;
+  }
+}

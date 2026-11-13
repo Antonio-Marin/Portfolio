@@ -1,0 +1,60 @@
+:host {
+  display: block;
+}
+
+#training {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #111;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.section-heading::before {
+  content: "";
+  width: 1.25rem;
+  height: 0.25rem;
+  background: #e21b2d;
+}
+
+.training-card {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.training-icon {
+  display: grid;
+  place-items: center;
+  min-height: 3rem;
+  border-right: 1px solid #111;
+  font-size: 1.75rem;
+}
+
+.training-icon svg {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  fill: currentColor;
+}
+
+.training-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.training-card p {
+  margin: 0.35rem 0 0;
+  color: #666;
+}

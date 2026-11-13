@@ -1,0 +1,45 @@
+:host {
+  display: block;
+}
+
+#knowledge {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #111;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.section-heading::before {
+  content: "";
+  width: 1.25rem;
+  height: 0.25rem;
+  background: #e21b2d;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-list li {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: #eee;
+  color: #222;
+  font-size: 0.9rem;
+}

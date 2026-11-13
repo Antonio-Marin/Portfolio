@@ -1,0 +1,77 @@
+:host {
+  display: block;
+}
+
+footer#contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #111;
+  margin: 2rem 2rem 0;
+}
+
+.footer-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.footer-role {
+  margin: 0.25rem 0 0;
+  color: #666;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-links li + li {
+  padding-left: 1.25rem;
+  border-left: 1px solid #111;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-icon {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: currentColor;
+  flex: none;
+}
+
+.contact-links a:hover {
+  color: #e21b2d;
+}
+
+.contact-links a:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  footer#contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1.5rem 1rem 0;
+    padding: 1.25rem 0;
+  }
+
+  .contact-links {
+    flex-wrap: wrap;
+  }
+}
